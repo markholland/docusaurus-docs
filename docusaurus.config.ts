@@ -34,11 +34,20 @@ const config: Config = {
       'classic',
       {
         docs: {
+          path: 'bcf',
+          routeBasePath: 'bcf',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          versions: {
+            current: {
+              label: '2.0',
+              path: '2.0',
+              banner: 'none',
+            },
+          }
         },
         blog: {
           showReadingTime: true,
@@ -51,6 +60,19 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'cde',
+        path: 'cde',
+        routeBasePath: 'cde',
+        sidebarPath: './sidebars.ts',
+        // ... other options
+      },
     ],
   ],
 
@@ -68,16 +90,26 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'BCF',
+        },
+        {
+          docId: 'docs/index',
+          type: 'doc',
+          position: 'left',
+          label: 'CDE',
+          docsPluginId: 'cde',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
           position: 'right',
+          docsPluginId: 'default',
+          type: 'docsVersionDropdown',
         },
         {
+          position: 'right',
+          docsPluginId: 'cde',
           type: 'docsVersionDropdown',
+          
         },
       ],
     },
@@ -88,8 +120,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'BCF',
+              to: '/bcf/docs',
+            },
+            {
+              label: 'CDE',
+              to: '/cde/docs',
             },
           ],
         },
