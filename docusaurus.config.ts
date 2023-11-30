@@ -37,19 +37,26 @@ const config: Config = {
           path: 'bcf',
           routeBasePath: 'bcf',
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          lastVersion: 'current',
           versions: {
             current: {
-              label: '2.0',
-              path: '2.0',
+              label: '3.0',
               banner: 'none',
             },
+            '2.0': {
+              label: '2.0',
+              banner: 'none',
+            },
+            '1.0': {
+              label: '1.0',
+              banner: 'none',
+            }
           }
         },
         blog: {
+          blogTitle: 'Articles',
+          path: 'articles',
+          routeBasePath: 'articles',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -71,7 +78,17 @@ const config: Config = {
         path: 'cde',
         routeBasePath: 'cde',
         sidebarPath: './sidebars.ts',
-        // ... other options
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: '2.0',
+            banner: 'none',
+          },
+          '1.0': {
+            label: '1.0',
+            banner: 'none',
+          }
+        }
       },
     ],
   ],
@@ -99,7 +116,7 @@ const config: Config = {
           label: 'CDE',
           docsPluginId: 'cde',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/articles', label: 'Articles', position: 'left'},
         {
           position: 'right',
           docsPluginId: 'default',
@@ -150,8 +167,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Articles',
+              to: '/articles',
             },
             {
               label: 'GitHub',
@@ -173,8 +190,19 @@ const config: Config = {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
+        blogRouteBasePath: "/articles",
+        blogDir: "articles",
+        docsDir: [
+          "bcf/docs",
+          "cde/docs",
+        ],
+        docsRouteBasePath: [
+          "bcf",
+          "cde",
+        ],
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
+        indexBlog: false,
       }),
     ],
   ],
