@@ -117,6 +117,7 @@ const config: Config = {
           docsPluginId: 'cde',
         },
         {to: '/articles', label: 'Articles', position: 'left'},
+        {to: 'pathname:///api', label: 'OpenAPI', position: 'left'},
         {
           position: 'right',
           docsPluginId: 'default',
