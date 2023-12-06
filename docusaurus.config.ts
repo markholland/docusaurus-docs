@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
+  title: 'Catenda Documentation',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -81,11 +81,39 @@ const config: Config = {
         lastVersion: 'current',
         versions: {
           current: {
-            label: '2.0',
+            label: 'Stable',
             banner: 'none',
           },
-          '1.0': {
-            label: '1.0',
+          'beta': {
+            label: 'Beta',
+            banner: 'none',
+          },
+          'development': {
+            label: 'Development',
+            banner: 'none',
+          }
+        }
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'viewer-2d',
+        path: 'viewer-2d',
+        routeBasePath: 'viewer-2d',
+        sidebarPath: './sidebars.ts',
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'Stable',
+            banner: 'none',
+          },
+          'beta': {
+            label: 'Beta',
+            banner: 'none',
+          },
+          'development': {
+            label: 'Development',
             banner: 'none',
           }
         }
@@ -97,7 +125,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Catenda Documentation',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -113,11 +141,18 @@ const config: Config = {
           docId: 'docs/index',
           type: 'doc',
           position: 'left',
-          label: 'CDE',
+          label: 'OpenCDE',
           docsPluginId: 'cde',
         },
+        {
+          docId: 'docs/index',
+          type: 'doc',
+          position: 'left',
+          label: 'Viewer 2D',
+          docsPluginId: 'viewer-2d',
+        },
         {to: '/articles', label: 'Articles', position: 'left'},
-        {to: 'pathname:///api', label: 'OpenAPI', position: 'left'},
+        // {to: 'pathname:///api', label: 'OpenAPI', position: 'left'},
         {
           position: 'right',
           docsPluginId: 'default',
@@ -126,6 +161,11 @@ const config: Config = {
         {
           position: 'right',
           docsPluginId: 'cde',
+          type: 'docsVersionDropdown',
+        },
+        {
+          position: 'right',
+          docsPluginId: 'viewer-2d',
           type: 'docsVersionDropdown',
           
         },
@@ -142,8 +182,12 @@ const config: Config = {
               to: '/bcf/docs',
             },
             {
-              label: 'CDE',
+              label: 'OpenCDE',
               to: '/cde/docs',
+            },
+            {
+              label: 'Viewer 2D',
+              to: '/viewer-2d/docs',
             },
           ],
         },
@@ -196,10 +240,12 @@ const config: Config = {
         docsDir: [
           "bcf/docs",
           "cde/docs",
+          "viewer-2d/docs"
         ],
         docsRouteBasePath: [
           "bcf",
           "cde",
+          "viewer-2d"
         ],
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,

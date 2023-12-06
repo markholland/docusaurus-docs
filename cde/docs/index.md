@@ -1,4 +1,4 @@
-CDE 2.0
+# OpenCDE 2.0
 
 # Catenda Rest API v2 Stable
 
