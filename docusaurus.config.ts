@@ -33,6 +33,7 @@ const config: Config = {
     [
       'classic',
       {
+        docs: false,
         blog: {
           blogTitle: 'Articles',
           path: 'articles',
@@ -138,6 +139,7 @@ const config: Config = {
         {
           docId: 'docs/index',
           type: 'doc',
+          sidebarId: 'sidebar',
           position: 'left',
           label: 'BCF',
           docsPluginId: 'bcf',
