@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { ProvidePlugin } from "webpack";
 
 const config: Config = {
   title: 'Catenda Documentation',
@@ -128,6 +129,39 @@ const config: Config = {
         }
       },
     ],
+    'docusaurus-plugin-sass',
+    // Add custom webpack config to make @stoplight/elements work
+    () => ({
+      name: "custom-webpack-config",
+      configureWebpack: () => {
+        return {
+          module: {
+            rules: [
+              {
+                test: /\.m?js/,
+                resolve: {
+                  fullySpecified: false,
+                },
+              },
+            ],
+          },
+          plugins: [
+            new ProvidePlugin({
+              process: require.resolve("process/browser"),
+            }),
+          ],
+          resolve: {
+            fallback: {
+              buffer: require.resolve("buffer"),
+              stream: false,
+              path: false,
+              process: false,
+              url: false,
+            },
+          },
+        };
+      },
+    }),
   ],
 
   themeConfig: {
@@ -162,8 +196,8 @@ const config: Config = {
           label: 'Viewer 2D',
           docsPluginId: 'viewer-2d',
         },
-        {to: '/articles', label: 'Articles', position: 'left'},
-        // {to: 'pathname:///api', label: 'OpenAPI', position: 'left'},
+        // {to: '/articles', label: 'Articles', position: 'left'},
+        // {to: 'api', label: 'OpenAPI', position: 'left'},
         {
           position: 'right',
           docsPluginId: 'bcf',
@@ -222,10 +256,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Articles',
-              to: '/articles',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/facebook/docusaurus',
