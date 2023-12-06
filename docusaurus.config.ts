@@ -162,7 +162,7 @@ const config: Config = {
         // {to: 'pathname:///api', label: 'OpenAPI', position: 'left'},
         {
           position: 'right',
-          docsPluginId: 'default',
+          docsPluginId: 'bcf',
           type: 'docsVersionDropdown',
         },
         {
