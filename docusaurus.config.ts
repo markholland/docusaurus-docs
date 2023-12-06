@@ -197,7 +197,7 @@ const config: Config = {
           docsPluginId: 'viewer-2d',
         },
         // {to: '/articles', label: 'Articles', position: 'left'},
-        // {to: 'docs', label: 'Root', position: 'left'},
+        {to: 'docs', label: 'Root', position: 'left'},
         {
           position: 'right',
           docsPluginId: 'bcf',
