@@ -63,7 +63,7 @@ const config: Config = {
         id: 'bcf',
         path: 'bcf',
         routeBasePath: 'bcf',
-        sidebarPath: './sidebars.ts',
+        sidebarPath: './sidebars-plugins.ts',
         lastVersion: 'current',
         versions: {
           current: {
@@ -87,7 +87,7 @@ const config: Config = {
         id: 'cde',
         path: 'cde',
         routeBasePath: 'cde',
-        sidebarPath: './sidebars.ts',
+        sidebarPath: './sidebars-plugins.ts',
         lastVersion: 'current',
         versions: {
           current: {
@@ -111,7 +111,7 @@ const config: Config = {
         id: 'viewer-2d',
         path: 'viewer-2d',
         routeBasePath: 'viewer-2d',
-        sidebarPath: './sidebars.ts',
+        sidebarPath: './sidebars-plugins.ts',
         lastVersion: 'current',
         versions: {
           current: {
@@ -198,6 +198,7 @@ const config: Config = {
         },
         // {to: '/articles', label: 'Articles', position: 'left'},
         {to: 'api', label: 'OpenAPI', position: 'left'},
+        {to: 'docs', label: 'Root', position: 'left'},
         {
           position: 'right',
           docsPluginId: 'bcf',
