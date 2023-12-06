@@ -33,26 +33,6 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          path: 'bcf',
-          routeBasePath: 'bcf',
-          sidebarPath: './sidebars.ts',
-          lastVersion: 'current',
-          versions: {
-            current: {
-              label: '3.0',
-              banner: 'none',
-            },
-            '2.0': {
-              label: '2.0',
-              banner: 'none',
-            },
-            '1.0': {
-              label: '1.0',
-              banner: 'none',
-            }
-          }
-        },
         blog: {
           blogTitle: 'Articles',
           path: 'articles',
@@ -71,6 +51,30 @@ const config: Config = {
   ],
 
   plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'bcf',
+        path: 'bcf',
+        routeBasePath: 'bcf',
+        sidebarPath: './sidebars.ts',
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'v3.0',
+            banner: 'none',
+          },
+          '2.0': {
+            label: 'v2.0',
+            banner: 'none',
+          },
+          '1.0': {
+            label: 'v1.0',
+            banner: 'none',
+          }
+        }
+      },
+    ],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -132,10 +136,11 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          docId: 'docs/index',
+          type: 'doc',
           position: 'left',
           label: 'BCF',
+          docsPluginId: 'bcf',
         },
         {
           docId: 'docs/index',
