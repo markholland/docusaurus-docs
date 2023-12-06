@@ -9,7 +9,7 @@ export default function Api() {
     <BrowserOnly>
       {() => (
         <Suspense fallback={Fallback}>
-          <LazyStoplight apiDescriptionUrl="https://raw.githubusercontent.com/markholland/catenda-openapi/main/catenda-openapi-stable.yaml" />
+          <LazyStoplight url="https://raw.githubusercontent.com/markholland/catenda-openapi/main/catenda-openapi-stable-v0.1.yaml" />
         </Suspense>
       )}
     </BrowserOnly>

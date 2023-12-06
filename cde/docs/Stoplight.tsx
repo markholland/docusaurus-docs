@@ -3,14 +3,14 @@ import React from "react";
 import styles from "./Stoplight.module.scss";
 
 interface StoplightProps {
-  apiDescriptionUrl: string;
+  url: string;
 }
 
-export function Stoplight({ apiDescriptionUrl }: StoplightProps) {
+export function Stoplight({ url }: StoplightProps) {
   return (
     <div className={(styles as { stoplight: string }).stoplight}>
       <API
-        apiDescriptionUrl={apiDescriptionUrl}
+        apiDescriptionUrl={url}
         hideTryIt={true}
         hideSchemas={true}
         hideExport={true}
