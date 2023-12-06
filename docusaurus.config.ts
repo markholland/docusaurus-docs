@@ -33,7 +33,11 @@ const config: Config = {
     [
       'classic',
       {
-        docs: false,
+        docs: {
+          path: 'docs',
+          routeBasePath: 'docs',
+          sidebarPath: './sidebars.ts',
+        },
         blog: {
           blogTitle: 'Articles',
           path: 'articles',
