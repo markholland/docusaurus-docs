@@ -198,7 +198,7 @@ const config: Config = {
         },
         // {to: '/articles', label: 'Articles', position: 'left'},
         {to: 'api', label: 'OpenAPI', position: 'left'},
-        {to: 'docs', label: 'Root', position: 'left'},
+        // {to: 'docs', label: 'Root', position: 'left'},
         {
           position: 'right',
           docsPluginId: 'bcf',

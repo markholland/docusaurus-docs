@@ -295,11 +295,6 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-    {
-      type: 'link',
-      label: 'API Explorer', // The link label
-      href: '/api', // The internal path
-    }
   ],
 };
 
