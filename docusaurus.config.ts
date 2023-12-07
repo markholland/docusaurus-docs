@@ -105,15 +105,15 @@ const config: Config = {
           items: [
             {
               label: 'BCF',
-              to: '/bcf/docs',
+              to: 'docs/BCF',
             },
             {
               label: 'OpenCDE',
-              to: '/cde/docs',
+              to: 'docs/OpenCDE',
             },
             {
               label: 'Viewer 2D',
-              to: '/viewer-2d/docs',
+              to: 'docs/Viewer 2D',
             },
           ],
         },
@@ -158,14 +158,7 @@ const config: Config = {
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
         docsDir: [
-          "bcf/docs",
-          "cde/docs",
-          "viewer-2d/docs"
-        ],
-        docsRouteBasePath: [
-          "bcf",
-          "cde",
-          "viewer-2d"
+          "docs",
         ],
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
