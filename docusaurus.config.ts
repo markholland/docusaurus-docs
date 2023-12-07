@@ -39,16 +39,6 @@ const config: Config = {
           routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
         },
-        blog: {
-          blogTitle: 'Articles',
-          path: 'articles',
-          routeBasePath: 'articles',
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -57,78 +47,6 @@ const config: Config = {
   ],
 
   plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'bcf',
-        path: 'bcf',
-        routeBasePath: 'bcf',
-        sidebarPath: './sidebars-plugins.ts',
-        lastVersion: 'current',
-        versions: {
-          current: {
-            label: 'v3.0',
-            banner: 'none',
-          },
-          '2.0': {
-            label: 'v2.0',
-            banner: 'none',
-          },
-          '1.0': {
-            label: 'v1.0',
-            banner: 'none',
-          }
-        }
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'cde',
-        path: 'cde',
-        routeBasePath: 'cde',
-        sidebarPath: './sidebars-plugins.ts',
-        lastVersion: 'current',
-        versions: {
-          current: {
-            label: 'Stable',
-            banner: 'none',
-          },
-          'beta': {
-            label: 'Beta',
-            banner: 'none',
-          },
-          'development': {
-            label: 'Development',
-            banner: 'none',
-          }
-        }
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'viewer-2d',
-        path: 'viewer-2d',
-        routeBasePath: 'viewer-2d',
-        sidebarPath: './sidebars-plugins.ts',
-        lastVersion: 'current',
-        versions: {
-          current: {
-            label: 'Stable',
-            banner: 'none',
-          },
-          'beta': {
-            label: 'Beta',
-            banner: 'none',
-          },
-          'development': {
-            label: 'Development',
-            banner: 'none',
-          }
-        }
-      },
-    ],
     'docusaurus-plugin-sass',
     // Add custom webpack config to make @stoplight/elements work
     () => ({
@@ -174,46 +92,9 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          docId: 'docs/index',
-          type: 'doc',
-          sidebarId: 'sidebar',
-          position: 'left',
-          label: 'BCF',
-          docsPluginId: 'bcf',
-        },
-        {
-          docId: 'docs/index',
-          type: 'doc',
-          position: 'left',
-          label: 'OpenCDE',
-          docsPluginId: 'cde',
-        },
-        {
-          docId: 'docs/index',
-          type: 'doc',
-          position: 'left',
-          label: 'Viewer 2D',
-          docsPluginId: 'viewer-2d',
-        },
-        // {to: '/articles', label: 'Articles', position: 'left'},
-        {to: 'docs', label: 'Root', position: 'left'},
-        {
-          position: 'right',
-          docsPluginId: 'bcf',
-          type: 'docsVersionDropdown',
-        },
-        {
-          position: 'right',
-          docsPluginId: 'cde',
-          type: 'docsVersionDropdown',
-        },
-        {
-          position: 'right',
-          docsPluginId: 'viewer-2d',
-          type: 'docsVersionDropdown',
-          
-        },
+        {to: 'docs/BCF', label: 'BCF', position: 'left'},
+        {to: 'docs/OpenCDE', label: 'OpenCDE', position: 'left'},
+        {to: 'docs/Viewer 2D', label: 'Viewer 2D', position: 'left'},
       ],
     },
     footer: {
@@ -276,8 +157,6 @@ const config: Config = {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
-        blogRouteBasePath: "/articles",
-        blogDir: "articles",
         docsDir: [
           "bcf/docs",
           "cde/docs",
