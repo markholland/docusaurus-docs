@@ -19,6 +19,7 @@ const sidebars: SidebarsConfig = {
       label: 'API',
       link: {
         type: 'generated-index',
+        slug: 'BCF/API',
       },
       items: [
         'BCF/API/Comment',
@@ -28,9 +29,9 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'BCF v2.1',
-      collapsed: false,
       link: {
         type: 'generated-index',
+        slug: 'BCF/BCF 2.1/API',
       },
       items: [
         'BCF/BCF 2.1/API/Comment',
@@ -40,9 +41,9 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'BCF v2.0',
-      collapsed: false,
       link: {
         type: 'generated-index',
+        slug: 'BCF/BCF 2.0/API',
       },
       items: [
         'BCF/BCF 2.0/API/Comment',
@@ -58,6 +59,7 @@ const sidebars: SidebarsConfig = {
       label: 'API',
       link: {
         type: 'generated-index',
+        slug: 'OpenCDE/API',
       },
       items: [
         'OpenCDE/API/Labels',
@@ -69,6 +71,7 @@ const sidebars: SidebarsConfig = {
       label: 'Beta',
       link: {
         type: 'generated-index',
+        slug: 'OpenCDE/Beta/API',
       },
       items: [
         'OpenCDE/Beta/API/Labels',
@@ -80,6 +83,7 @@ const sidebars: SidebarsConfig = {
       label: 'Development',
       link: {
         type: 'generated-index',
+        slug: 'OpenCDE/Development/API',
       },
       items: [
         'OpenCDE/Development/API/Labels',
@@ -100,6 +104,7 @@ const sidebars: SidebarsConfig = {
       label: 'Methods',
       link: {
         type: 'generated-index',
+        slug: 'Viewer 2D/Methods',
       },
       items: [
         'Viewer 2D/Methods/addImage',
@@ -111,6 +116,7 @@ const sidebars: SidebarsConfig = {
       label: 'Beta',
       link: {
         type: 'generated-index',
+        slug: 'Viewer 2D/Beta/Methods',
       },
       items: [
         'Viewer 2D/Beta/Methods/addImage',
@@ -122,6 +128,7 @@ const sidebars: SidebarsConfig = {
       label: 'Development',
       link: {
         type: 'generated-index',
+        slug: 'Viewer 2D/Development/Methods',
       },
       items: [
         'Viewer 2D/Development/Methods/addImage',
