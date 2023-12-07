@@ -55,45 +55,19 @@ const sidebars: SidebarsConfig = {
     'OpenCDE/index',
     'OpenCDE/authentication',
     {
-      type: 'category',
+      type: 'doc',
+      id: 'OpenCDE/Swagger UI',
       label: 'API',
-      link: {
-        type: 'generated-index',
-        slug: 'OpenCDE/API',
-      },
-      items: [
-        'OpenCDE/API/Labels',
-        'OpenCDE/API/Members',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Beta',
-      link: {
-        type: 'generated-index',
-        slug: 'OpenCDE/Beta/API',
-      },
-      items: [
-        'OpenCDE/Beta/API/Labels',
-        'OpenCDE/Beta/API/Members',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Development',
-      link: {
-        type: 'generated-index',
-        slug: 'OpenCDE/Development/API',
-      },
-      items: [
-        'OpenCDE/Development/API/Labels',
-        'OpenCDE/Development/API/Members',
-      ],
     },
     {
       type: 'doc',
-      id: 'OpenCDE/Swagger UI',
-      label: 'API Explorer',
+      id: 'OpenCDE/Swagger UI Beta',
+      label: 'Beta API',
+    },
+    {
+      type: 'doc',
+      id: 'OpenCDE/Swagger UI Development',
+      label: 'Development API',
     }
   ],
   viewerSidebar: [
