@@ -5,7 +5,7 @@ import { ProvidePlugin } from "webpack";
 
 const config: Config = {
   title: 'Catenda Documentation',
-  tagline: 'Dinosaurs are cool',
+  // tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -94,7 +94,8 @@ const config: Config = {
       items: [
         {to: 'docs/BCF', label: 'BCF', position: 'left'},
         {to: 'docs/OpenCDE', label: 'OpenCDE', position: 'left'},
-        {to: 'docs/Viewer 2D', label: 'Viewer 2D', position: 'left'},
+        {to: 'docs/Viewer 2D', label: '2D Viewer', position: 'left'},
+        {to: 'docs/Viewer 3D', label: '3D Viewer', position: 'left'},
       ],
     },
     footer: {
