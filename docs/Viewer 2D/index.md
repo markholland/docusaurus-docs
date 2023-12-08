@@ -12,9 +12,9 @@ Bimsync Viewer 2D requires [jQuery 1.x](http://jquery.com/) to run.
 
 The Viewer 2D API can be automatically initialized by using the DOM data API or manually initialized in JavaScript.
 
-**Note** In the example below, nothing will be displayed until you use the [showStorey](/developers/reference/viewer-2d#showstorey)
+**Note** In the example below, nothing will be displayed until you use the [showStorey](/)
 
-**Note** If you are using the Viewer 3D API and want a predefined 2D/3D integration you can use our [Viewer Widget API](/developers/reference/viewer-ui/1.0).
+**Note** If you are using the Viewer 3D API and want a predefined 2D/3D integration you can use our [Viewer Widget API](/).
 
 ## DOM Data API
 
@@ -70,7 +70,7 @@ The Viewer 2D API can be automatically initialized by using the DOM data API or 
 </html>
 ```
 
-1. Create a viewer access token by using the **POST v2/projects/:project/viewer2d/token** described in the [Bimsync REST API](/developers/reference/api/v2#create-viewer2d-token).
+1. Create a viewer access token by using the **POST v2/projects/:project/viewer2d/token** described in the [Bimsync REST API](/).
 
 2. Add the Viewer 2D framework to you application.
 
@@ -78,7 +78,7 @@ The Viewer 2D API can be automatically initialized by using the DOM data API or 
 
 ## JavaScript
 
-1. Create a viewer access token by using the **POST v2/projects/:project/viewer2d/token** described in the [Bimsync REST API](/developers/reference/api/v2#create-viewer2d-token).
+1. Create a viewer access token by using the **POST v2/projects/:project/viewer2d/token** described in the [Bimsync REST API](/).
 
 2. Create a DIV element which will contain the 2D-viewer.
 

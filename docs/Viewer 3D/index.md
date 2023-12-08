@@ -25,13 +25,13 @@ The viewer can either be automatically initialized by using the DOM data API or 
 ></div>
 ```
 
-1. Create a viewer access token by using the **POST v2/projects/:project/viewer3d/token** resources in the [Bimsync REST API](/developers/reference/api/v2#create-viewer3d-token).
+1. Create a viewer access token by using the **POST v2/projects/:project/viewer3d/token** resources in the [Bimsync REST API](/).
 
 2. Add the viewer framework to you application:
 
 3. Create a viewer instance. The data attribute _data-viewer_ must have the value _webgl_. The data attribute _data-url_ must be the _url_ field from a viewer access token.
 
-To enable the [Viewer UI plugin](/developers/reference/viewer-ui/1.0), add the data attribute, _data-ui_, to the viewer element. See the [Viewer UI plugin documentation](/developers/reference/viewer-ui/1.0) for more info.
+To enable the [Viewer UI plugin](/), add the data attribute, _data-ui_, to the viewer element. See the [Viewer UI plugin documentation](/) for more info.
 
 ### JavaScript
 
@@ -62,11 +62,11 @@ To enable the [Viewer UI plugin](/developers/reference/viewer-ui/1.0), add the d
 </script>
 ```
 
-1. Create a viewer access token by using the **POST v2/projects/:project/viewer3d/token** resources in the [Bimsync REST API](/developers/reference/api/v2#create-viewer3d-token).
+1. Create a viewer access token by using the **POST v2/projects/:project/viewer3d/token** resources in the [Bimsync REST API](/).
 
 2. Create a DIV element which will contain the viewer.
 
-To enable the [Viewer UI plugin](/developers/reference/viewer-ui/1.0), a parameter could be passed to the bimsync.load() method. See the [Viewer UI plugin documentation](/developers/reference/viewer-ui/1.0) for more info.
+To enable the [Viewer UI plugin](/), a parameter could be passed to the bimsync.load() method. See the [Viewer UI plugin documentation](/) for more info.
 
 # Options
 

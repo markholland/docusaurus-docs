@@ -15,40 +15,19 @@ const sidebars: SidebarsConfig = {
     'BCF/index',
     'BCF/Introduction/issue-boards',
     {
-      type: 'category',
-      label: 'API',
-      link: {
-        type: 'generated-index',
-        slug: 'BCF/API',
-      },
-      items: [
-        'BCF/API/Comment',
-        'BCF/API/Document',
-      ],
+      type: 'doc',
+      id: 'BCF/Swagger UI',
+      label: 'API Explorer',
     },
     {
-      type: 'category',
-      label: 'BCF v2.1',
-      link: {
-        type: 'generated-index',
-        slug: 'BCF/BCF 2.1/API',
-      },
-      items: [
-        'BCF/BCF 2.1/API/Comment',
-        'BCF/BCF 2.1/API/Document',
-      ],
+      type: 'doc',
+      id: 'BCF/Swagger UI Beta',
+      label: 'Beta API Explorer',
     },
     {
-      type: 'category',
-      label: 'BCF v2.0',
-      link: {
-        type: 'generated-index',
-        slug: 'BCF/BCF 2.0/API',
-      },
-      items: [
-        'BCF/BCF 2.0/API/Comment',
-        'BCF/BCF 2.0/API/Document',
-      ],
+      type: 'doc',
+      id: 'BCF/Swagger UI Development',
+      label: 'Development API Explorer',
     }
   ],
   cdeSidebar: [
@@ -57,17 +36,17 @@ const sidebars: SidebarsConfig = {
     {
       type: 'doc',
       id: 'OpenCDE/Swagger UI',
-      label: 'API',
+      label: 'API Explorer',
     },
     {
       type: 'doc',
       id: 'OpenCDE/Swagger UI Beta',
-      label: 'Beta API',
+      label: 'Beta API Explorer',
     },
     {
       type: 'doc',
       id: 'OpenCDE/Swagger UI Development',
-      label: 'Development API',
+      label: 'Development API Explorer',
     }
   ],
   viewer2DSidebar: [
