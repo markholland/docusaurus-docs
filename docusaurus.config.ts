@@ -89,7 +89,7 @@ const config: Config = {
       title: 'Catenda Documentation',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/icon.png',
       },
       items: [
         {to: 'docs/BCF', label: 'BCF', position: 'left'},

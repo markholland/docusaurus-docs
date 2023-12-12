@@ -1,21 +1,29 @@
-# loadUrl
+## loadUrl
 
 > Example:
 
 ```javascript--jquery
-$('#viewer-2d').viewer2d(
-  'loadUrl',
-  'https://api.catenda.com/v2/projects/dabc6df.../viewer2d/geometry?token=410c0aa7...',
-  { append: true }
-);
+// Default - all objects
+$('.viewer').viewer('loadUrl', 'https://api.catenda.com/v2/projects/978720ca.../viewer3d/data?token=8958f669f...');
+
+// Single object
+$('.viewer').viewer('loadUrl', 'https://api.catenda.com/v2/projects/978720ca.../viewer3d/data?token=8958f669f...', {
+  objectId: 123251972852
+});
+
+// Multiple objects
+$('.viewer').viewer('loadUrl', 'https://api.catenda.com/v2/projects/978720ca.../viewer3d/data?token=8958f669f...', {
+  objectId: { $in : [ 123251972852, 123251836942 ] }
+});
 ```
 
-Load the contents of a viewer-2d access token.
+Load the contents of a viewer access token.
+
+Note that this function can be called several times with different urls. This way you can for example use one viewer token per model and load the models one at a time.
+
+It is also possible to provide a `query` object where you can specify a subset of object ids from the viewer token to load.
 
 **Parameters**:
 
 - url - String
-- options
-    - append - boolean (optional, default is false) - If append is set to true, the model will be appended to the existing models in the viewer. If set to false, all existing models will be removed before the model is loaded.
-    - modelId - String (optional) - The modelId is used to identify the loaded model. Removal of a single model will require the modelId. If not present, a random id will be assigned.
-    - modelName - String (optional) - The name of the model. This can be used to store a user friendly name of the model.
+- _optional_ query - Object

@@ -1,4 +1,4 @@
-# viewer2d.select
+## viewer.select
 
 Triggered when the set of selected objects is changed by user events (e.g. mouse clicks).
 
