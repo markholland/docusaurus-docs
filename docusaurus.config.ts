@@ -113,8 +113,12 @@ const config: Config = {
               to: 'docs/OpenCDE',
             },
             {
-              label: 'Viewer 2D',
+              label: '2D Viewer',
               to: 'docs/Viewer 2D',
+            },
+            {
+              label: '3D Viewer',
+              to: 'docs/Viewer 3D',
             },
           ],
         },
